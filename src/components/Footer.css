@@ -1,0 +1,16 @@
+.footer{
+    flex-shrink: 0;
+    background-color: pink;
+    color: turquoise;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer h6{
+    color: lightgreen;
+    margin: auto;
+}
+
+.footer h4{
+    margin: auto;
+}
