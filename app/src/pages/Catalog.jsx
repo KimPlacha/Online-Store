@@ -1,8 +1,7 @@
-import Product from "../components/Product";
 import "./Catalog.css";
+import Product from "../components/Product";
 
 function Catalog(){
-
     const data = [
         {
             title: 'Strawberries',
@@ -16,7 +15,7 @@ function Catalog(){
             title: 'Apples',
             category: 'Fruit',
             price: 2.99,
-            image: '.apple.jpeg',
+            image: 'apples.jpeg',
             _id: '2',
         }
         ,
@@ -24,7 +23,7 @@ function Catalog(){
             title: 'Guavas',
             category: 'Fruit',
             price: 3.99,
-            image: 'img1.jpg',
+            image: 'guava.jpeg',
             _id: '3',
         }
         ,
@@ -32,45 +31,39 @@ function Catalog(){
             title: 'Pears',
             category: 'Fruit',
             price: 2.99,
-            image: 'img1.jpg',
+            image: 'pears.jpg',
             _id: '4',
         },
         {
             title: 'Passion fruit',
             category: 'Fruit',
             price: 5.99,
-            image: 'img1.jpg',
+            image: 'passionfruit.jpeg',
             _id: '5',
         },
         {
             title: 'Starfruit',
             category: 'Fruit',
             price: 3.99,
-            image: 'img1.jpg',
+            image: 'starfruit.jpeg',
             _id: '6',
         },
         {
             title: 'Lychee',
             category: 'Fruit',
             price: 6.99,
-            image: 'img1.jpg',
+            image: 'lychee.jpeg',
             _id: '7',
         },
     ];
-
 
     return (
         <div className="catalog page">
             <h1>Our amazing catalog!</h1>
 
-        <Product info={data[0]} />
-        <Product info={data[1]} />
-        <Product info={data[2]} />
-        <Product info={data[3]} />
-        <Product info={data[4]} />
-        <Product info={data[5]} />
-        <Product info={data[6]} />
-
+            {data.map(prod => (
+                <Product key={prod._id} info={prod} />
+            ))}
         </div>
     );
 }
