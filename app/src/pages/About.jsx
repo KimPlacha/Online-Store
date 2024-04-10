@@ -1,16 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 import "./About.css";
-
-function About(){
+function About() {
     const [contactVisible, setContactVisible] = useState(false);
 
-    function showData(){
-        console.log('button clicked!');
-        setContactVisible(true);
+    function showData() {
+        setContactVisible(!contactVisible);
     }
-
-
-
+    
     return (
         <div className="about page">
             <h3>Kimberly Placha</h3>

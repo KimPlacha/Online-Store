@@ -1,8 +1,16 @@
-h1 {
-    color: hotpink;
+.navbar {
+    background-color: #CAFFBF;
+    color: black;
+    font-weight: bold;
 }
 
-.navbar button {
+
+.navbar h1 {
+    color: #CAFFBF;
+}
+
+.btn-color2 {
     font-weight: bold;
-    font-family: monospace;
+    background-color: #CAFFBF;
+    align-items: center;
 }

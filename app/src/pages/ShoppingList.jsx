@@ -1,40 +1,48 @@
-/* eslint-disable no-undef */
-import { useState } from 'react';
-import './ShoppingList.css';
+import { useState } from "react";
+import "./ShoppingList.css";
 
-function ShoppingList(){
+function ShoppingList() {
     const [list, setList] = useState(['Test 1', 'Test 2', 'Test 3']);
+    const [, setText] = useState('');
 
     function addItem() {
         console.log('adding');
 
         /**
-         * create a copy
-         * modify your copy
-         * set the copy
-         */
+        * create a copy 
+        * modify your copy 
+        * set the copy
+        */
 
-        let copy = [...list];
-        copy.push('NEW');
-        setList(copy);
+
+    }
+
+    function handleTextChange(e) {
+        const val = e.target.value;
+        setText(val);
+    }
+
+    function deleteAll() {
+        setList([]);
     }
 
     return (
         <div className="shopping-list page">
-            <h3>Shopping List</h3>
+            <h1>Shopping List</h1>
 
             <div className="box">
-                <input type="text" />
-            <button onClick={addItem} className="btn btn-sm btn-success">
-            Add
-            </button>
-        </div>
+                <input onChange={handleTextChange} type="text" />
+                <button onClick={addItem} className="btn btn-color1 btn-sm btn-success">Add</button>
+                <button onClick={deleteAll} className="btn btn-sm btn-danger">Clear</button>
+            </div>
 
-        <ul>
-            {list.map( x => <li>{x}</li>)}
-        </ul>
-        </div>
+            <ul>
+                {list.map(x => <li>{x}</li>)}
+            </ul>
+        </div >
+
     );
 }
+
 
 export default ShoppingList;
