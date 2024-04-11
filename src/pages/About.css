@@ -1,0 +1,13 @@
+.about {
+    background-color: lightblue;
+}
+
+.about h3 {
+    color: aqua;
+}
+
+.about .box {
+    background-color: orange;
+    border: 1px solid red
+}
+

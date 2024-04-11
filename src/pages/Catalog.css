@@ -1,7 +1,8 @@
-.catalog{
-    background-color: rgb(197, 213, 219);
+.catalog {
+    background-color: #04471C;
 }
-.catalog h1{
-    color: darkcyan;
-    margin: 0;
+
+.catalog h1 {
+    color: white;
+    margin-bottom: 10px;
 }

@@ -1,18 +1,25 @@
-import { useState } from 'react';
+/* eslint-disable no-undef */
+import { useState } from "react";
 import "./Quantitypicker.css";
 
-function Quantitypicker() {
+function Quantitypicker(props) {
     const [quantity, setQuantity] = useState(1);
+
 
     function increase() {
         let newVal = quantity + 1;
-        console.log('+ clicked');
+        setQuantity(newVal);
+        props.onChange(newVal);
     }
-    return(
+
+
+    return (
+        // eslint-disable-next-line react/jsx-no-comment-textnodes
         <div className="qt-picker">
-            <button>-</button>
-            <button>1</button>
-            <button onClick={increase}>+</button>
+            // eslint-disable-next-line no-undef, no-undef
+            <button className="minus" disabled={quantity === 1} onClick={decrease}>-</button>
+            <label>{quantity}</label>
+            <button className="plus" onClick={increase}>+</button>
         </div>
     )
 }
