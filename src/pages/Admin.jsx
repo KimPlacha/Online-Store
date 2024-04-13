@@ -38,8 +38,8 @@ function Admin() {
         const val = e.target.value;
         const {name} = e.target;
 
-// sourcery skip: avoid-using-var
-        var copy = { ...product };
+
+        let copy = { ...product };
         copy[name] = val;
         setProduct(copy);
     }
@@ -47,7 +47,7 @@ function Admin() {
     function saveProduct() {
         console.log(product);
 
-        var copy = [...allProducts];
+        let copy = [...allProducts];
         copy.push(product);
         setAllProducts(copy);
     }

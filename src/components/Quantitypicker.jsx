@@ -12,11 +12,15 @@ function Quantitypicker(props) {
         props.onChange(newVal);
     }
 
+    function decrease() {
+        let newVal = quantity - 1;
+        setQuantity(newVal);
+        props.onChange(newVal);
+    }
+
 
     return (
-        // eslint-disable-next-line react/jsx-no-comment-textnodes
         <div className="qt-picker">
-            // eslint-disable-next-line no-undef, no-undef
             <button className="minus" disabled={quantity === 1} onClick={decrease}>-</button>
             <label>{quantity}</label>
             <button className="plus" onClick={increase}>+</button>
